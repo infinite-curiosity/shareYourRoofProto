@@ -1,0 +1,172 @@
+<div class="landing-wrapper">
+	<div class="page-header">
+		<div class="nav-container">
+		  	<nav class="navbar navbar-inverse bg-inverse navbar-override">			  
+			  <a class="navbar-brand nav-brand-override" href="#">Bhawani Enterprises</a>
+			  <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown"> -->
+			    <ul class="navbar-nav pull-right">		
+			      <li class="nav-item nav-item-override dropdown">
+			        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" >
+			          	<i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+			        </a>
+			        <ul class="dropdown-menu dropdown-menu-override" aria-labelledby="navbarDropdownMenuLink">  
+			        	<div>
+			        		<a href="#/myAccount">My Profile</a>
+			        	</div>
+			        	<div>
+			        		<a href="#/login">Logout</a>
+			        	</div>
+			        </ul>
+			      </li>	      
+			      <li class="nav-item nav-item-override">
+			        <a class="nav-link nav-link-override" href="#/register">Register</a>
+			      </li>
+			       <li class="nav-item nav-item-override">
+			        <a class="nav-link nav-link-override" href="#/login">Sign In</a>
+			      </li>  			      			     			      
+			    </ul>
+			  <!-- </div> -->
+			</nav>
+		</div>
+	</div>
+	<div class="carousel-wrapper">
+		<div id = "adCarousel" class = "carousel slide header-carousel" data-ride="carousel">
+		<ol class = "carousel-indicators">
+		   <li data-target = "#adCarousel" data-slide-to = "0" class = "active"></li>
+		   <li data-target = "#adCarousel" data-slide-to = "1"></li>
+		   <li data-target = "#adCarousel" data-slide-to = "2"></li>
+		</ol>           
+		<div class = "carousel-inner">
+		   <div class = "carousel-item active">
+			  <img class="d-block img-fluid carousel-img-style" src = "assets/img/app/carousel-images/1.jpg" alt = "First slide">
+		   </div>
+		   
+		   <div class = "carousel-item">
+			  <img class="d-block img-fluid carousel-img-style" src = "assets/img/app/carousel-images/2.jpg" alt = "Second slide">
+		   </div>
+		   
+		   <div class = "carousel-item">
+			  <img class="d-block img-fluid carousel-img-style" src = "assets/img/app/carousel-images/3.jpg" alt = "Third slide">
+		   </div>
+		</div>        
+		<a class = "carousel-control left carousel-control-override" href = "#adCarousel" data-slide = "prev">&lsaquo;</a>
+		<a class = "carousel-control right carousel-control-override" href = "#adCarousel" data-slide = "next">&rsaquo;</a>        
+	 </div>
+	</div>
+	<div class="page-content clearfix">
+		<md-tab-group class="clearfix" style="pointer-events:none !important">
+			<md-tab label="Bangalore" class="s3-tab-header">
+				<!-- <h1>Some tab content</h1>
+				<div>hello</div> -->
+			</md-tab>
+			<md-tab label="Chennai">
+				<!-- <h1>Some more tab content</h1>
+				<div>hello</div> -->
+			</md-tab>
+			<md-tab label="Delhi">
+				<!-- <h1>Some tab content</h1>
+				<div>hello</div> -->
+			</md-tab>
+			<md-tab label="Mumbai">
+				<!-- <h1>Some more tab content</h1>
+				<div>hello</div> -->
+			</md-tab>
+		</md-tab-group>
+		<div class="container">
+			<div class="row city-details">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 map-section">
+					<google-maps></google-maps>
+
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 branch-section">			
+					<div id="branch-accordion" role="tablist" class="margin-top-20">
+        				<div class="card card-override" *ngFor="let branch of branches let $index=index">
+          					<div class="card-header" role="tab" id="heading-{{$index}}">
+            					<h5 class="mb-0">
+              						<a data-toggle="collapse" data-parent="#branch-accordion" href="#collapse{{$index}}">{{branch.name}}</a>
+            					</h5>
+          					</div>
+          					<div id="collapse{{$index}}" class="collapse show" role="tabpanel">
+            					<div class="card-block">
+	            					<div class="row inner-card-style">
+	              						<div class="col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12 margin-10">
+	               							<div id = "inner-carousel-{{$index}}" class = "carousel slide carousel-style inner-carousel">                          
+	                  							<div class = "carousel-inner">
+	                     							<div class = "carousel-item active">
+	                        							<img class="d-block img-fluid carousel-img-style" src = "assets/img/app/carousel-images/1.jpg" alt = "First slide">
+	                     							</div>                     
+	                     							<div class = "carousel-item">
+	                        							<img class="d-block img-fluid carousel-img-style" src = "assets/img/app/carousel-images/2.jpg" alt = "Second slide">
+	                     							</div>                     
+	                     							<div class = "carousel-item">
+	                        							<img class="d-block img-fluid carousel-img-style" src = "assets/img/app/carousel-images/3.jpg" alt = "Third slide">
+	                     							</div>
+	                  							</div>        
+	                  							<a class = "carousel-control left" href = "#inner-carousel-{{$index}}" data-slide = "prev">&lsaquo;</a>
+	                  							<a class = "carousel-control right" href = "#inner-carousel-{{$index}}" data-slide = "next">&rsaquo;</a>        
+	               							</div> 
+	              						</div>
+	              						<div class="col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-xs-12 margin-10">
+	                						<div class="card-block">
+	                  							<ul>
+	                    							<li>Gym</li>
+								                    <li>Swimming pool</li>
+								                    <li>Car park</li>
+								                    <li>Club house</li>
+								                    <li>Guests allowed</li>
+	                  							</ul>
+	              							</div>
+	              						</div>
+	            					</div>            
+	            				</div>
+            				</div>
+          				</div>		        		
+      				</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+	<footer class="s3-footer">
+		<div class="container">
+	  		<div class="row">
+	  			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 footer-lhs">
+	  				<div class="title margin-top-20">
+						<h4>Bhavani<span>&nbsp;Enterprises</span></h4>
+					</div>
+					<div class="footer-links margin-top-20">
+						<a href="#">Home</a>
+						<i class="fa fa-circle seperator" aria-hidden="true"></i>
+						<a href="#">Action 2</a>
+						<i class="fa fa-circle seperator" aria-hidden="true"></i>
+						<a href="#">Action 3</a>
+						<i class="fa fa-circle seperator" aria-hidden="true"></i>
+						<a href="#">About</a>
+						<i class="fa fa-circle seperator" aria-hidden="true"></i>
+						<a href="#">Faq</a>
+						<i class="fa fa-circle seperator" aria-hidden="true"></i>
+						<a href="#">Contact</a>
+					</div>
+					<div class="footer-company-name margin-top-20">ISO 9007:2000 © 2017</div>
+					<div class="footer-icons margin-top-20">
+						<a href="#"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;
+						<a href="#"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;
+						<a href="#"><i class="fa fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;
+						<a href="#"><i class="fa fa-github"></i></a>&nbsp;&nbsp;&nbsp;
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 footer-rhs">
+					<h1 class="box-title disp-block">Contact Us</h1>
+				    <md-input-container class="contact-us-box disp-block">
+				      	<input md-input placeholder="Email">
+				    </md-input-container>
+				
+					<md-input-container class="contact-us-message disp-block">
+				      	<textarea md-input placeholder="Message" class="s3-textarea"></textarea>
+				    </md-input-container>
+			  		<button class="action-button disp-block pull-right">Send</button>		
+				</div>
+	  		</div>
+	  	</div>	  	
+	</footer> 
+</div>
